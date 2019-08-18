@@ -26,7 +26,7 @@ The first line contains a single integer, <i><b>n</b></i>, the number of student
 Each line <i><b>i</b></i> of the subsequent lines contains a single integer, <b><i>grades[i]</i></b> , denoting student <i><b>i</b></i>'s grade.
 
 <b>Constraints</b>
-- <b>1 $\leq$</b> <i>n</i> <b>$\leq$ 60</b>
+- <b>1 \leq</b> <i>n</i> <b>$\leq$ 60</b>
 - <b>0 $\leq$</b> <i>grades[i]</i> <b>$\leq$ 100</b>
 
 <b>Output Format</b>
