@@ -26,8 +26,8 @@ The first line contains a single integer, <i><b>n</b></i>, the number of student
 Each line <i><b>i</b></i> of the subsequent lines contains a single integer, <b><i>grades[i]</i></b> , denoting student <i><b>i</b></i>'s grade.
 
 <b>Constraints</b>
-- <b>1 $\leq$</b> <i>n</i> <b>$\leq$ 60</b>
-- <b>0 $\leq$</b> <i>grades[i]</i> <b>$\leq$ 100</b>
+- <b>1 &leq;</b> <i>n</i> <b>&leq; 60</b>
+- <b>0 &leq;</b> <i>grades[i]</i> <b>&leq; 100</b>
 
 <b>Output Format</b>
 
@@ -37,13 +37,13 @@ For each <i>grades[i]</i>, print the rounded grade on a new line.
 The wording for this problem can be tricky. We can start by breaking it down as so:
 
 1. Grades are between 0 and 100.
-2. Grades less than 40 <i>(n $\lt$ 40)</i> are considered failing.
-3. Grades are rounded to the nearest multiple of 5, if not considered failing <i>($\lt$ 40)</i>.
+2. Grades less than 40 <i>(n &lt; 40)</i> are considered failing.
+3. Grades are rounded to the nearest multiple of 5, if not considered failing <i>(&lt; 40)</i>.
 4. Grades less than 38 (37 or below) will not be rounded at all because they will never be 40 or greater.
 
 The easiest way to solve this problem is start by figuring out when we want to round. If we let each grade be defined as g we can assert the following:
 
-<i>g is rounded to the nearest multiple of 5 when g $\lt$ 3. Anything less than 38 can be skipped and we take the unaltered grading value.</i>
+<i>g is rounded to the nearest multiple of 5 when g &lt; 3. Anything less than 38 can be skipped and we take the unaltered grading value.</i>
 
 The next part of the problem is figuring out whether a value <i>should</i> be rounded even though it is 38 or greater. Modulo is our best friend here, because we can use remainders to determine whether a value should be rounded. Let's use this table as an example:
 
@@ -70,6 +70,6 @@ If <i>5 - (73 mod 5) = 2</i>, then we know that <i>73</i> needs to be added by <
 ## Putting it all Together
 We can assert the following:
 
-For a given grade <i>g</i>, if <i>g $\geq$ 38</i> and <i>5 - (g mod 5) $\lt$ 3</i>, then <i>g</i> = g + (5 - (g mod 5)). Otherwise, take the value of <i>g</i> itself.
+For a given grade <i>g</i>, if <i>g &geq; 38</i> and <i>5 - (g mod 5) &lt; 3</i>, then <i>g</i> = g + (5 - (g mod 5)). Otherwise, take the value of <i>g</i> itself.
 
 The above assertion gives us the solution needed to solve this problem.
