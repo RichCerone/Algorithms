@@ -53,12 +53,11 @@ And if <i>d = 3</i> on the same array [1,2,3,4,5], we also observe the following
 
 Do you see a pattern? Notice how the value of <i>d</i> dictates where the rest of the elements are placed? When <i>d = 2</i>, everything before index <i>2</i> in the array comes <i>after</i> the <i>5</i>, and everything inlcuding index <i>2</i> comes <i>before</i>. In fact, we can define a formula for how the last element in the array (in this case <i>5</i>) will be placed at what index:
 
-    Let the length of the array be defined as <i>l</i> and <i>d</i> define the number of left rotations. 
-    <i>(l - d) - 1</i> defines the index where the last element in the array will be inserted at the end of the rotation.
+Let the length of the array be defined as <i>l</i> and <i>d</i> define the number of left rotations. <i>(l - d) - 1</i> defines the index where the last element in the array will be inserted at the end of the rotation.
 
 The above formula is initially helpful because it shows that as long as we know where the last element in the array sits, we can determine what comes before and after it. It also helps us identify an edge case:
 
-    If <i>d = l</i> then we return the array unaltered.
+If <i>d = l</i> then we return the array unaltered.
 
 This is because, we know that the array will simply shift enough times where all the elements will end in the same position as they started.
 
