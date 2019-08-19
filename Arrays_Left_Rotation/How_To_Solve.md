@@ -51,7 +51,7 @@ And if <i>d = 3</i> on the same array [1,2,3,4,5], we also observe the following
     Step 2: [3,4,5,1,2]
     Step 3: [4,5,1,2,3]
 
-Do you see a pattern? Notice how the value of <i>d</i> dictates where the rest of the elements are placed? When <i>d = 2</i>, everything before index <i>2</i> in the array comes <i>after</i> the <i>5</i>, and everything inlcuding index <i>2</i> comes <i>before</i>. In fact, we can define a formula for how the last element in the array (in this case <i>5</i>) will be place at what index:
+Do you see a pattern? Notice how the value of <i>d</i> dictates where the rest of the elements are placed? When <i>d = 2</i>, everything before index <i>2</i> in the array comes <i>after</i> the <i>5</i>, and everything inlcuding index <i>2</i> comes <i>before</i>. In fact, we can define a formula for how the last element in the array (in this case <i>5</i>) will be placed at what index:
 
 Let the length of the array be defined as <i>l</i> and <i>d</i> define the number of left rotations. <i>(l - d) - 1</i> defines the index where the last element in the array will be inserted at the end of the rotation.
 
