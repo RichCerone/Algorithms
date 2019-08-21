@@ -61,9 +61,9 @@ Based on this simple math we know that rows 1 and 3 would be rounded to the near
 
 To figure out how to know what the multiple of 5 is, we can simply subract 5 from the remainder of a modulo operation to get the proper remainder (or distance) from the next multiple of 5. For example:
 
-<i>5 - (73 mod 5) = 2</i>
-<i>5 - (67 mod 5) = 3</i>
-<i>5 - (38 mod 5) = 2</i>
+- <i>5 - (73 mod 5) = 2</i>
+- <i>5 - (67 mod 5) = 3</i>
+- <i>5 - (38 mod 5) = 2</i>
 
 If <i>5 - (73 mod 5) = 2</i>, then we know that <i>73</i> needs to be added by <i>2</i> in order to get to the next multiple of <i>5</i>: <i>75</i>.
 
