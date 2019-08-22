@@ -87,9 +87,9 @@ We can shows this by a step by step example:
     6. Was 2 bribed? Yes, 4 is greater than 2.
     7. Was 3 bribed? Yes, 4 is greater than 3.
 
-Essentially what is occuring is we are starting with the first index and slowly expanding our windows across the array and seeing if the current index is greater than the largest number in the current window.
+Essentially what is occuring is we are starting with the first index and slowly expanding our windows across the array and seeing if the current index is the largest number in the current window.
 
 ## Putting it all Together
 We can assert the following:
 
-Define a given array <i>a</i> where each index can be defined as <i>i<sub>n</sub>. &forall; i<sub>n</sub> &isin; a</i>, let the value of each <i>i<sub>n</sub></i> be defined as <i>n<sub>i</sub></i>. Let <i>a'</i> be defined as { n<sub>i</sub> - 1</i> | <i>n<sub>i</sub> &isin; a &gt; n<sub>i</sub> &isin; a' }</i>. If <i>n<sub>i</sub> - i<sub>n</sub> &isin; a' &gt; 2;</i> determine the array to be "too chaotic." Let the number of bribes be defined as <i>b = 0</i>. For each <i>i<sub>n</sub> &isin; a'</i>, let s  &sub; a' where <i>s = { n<sub>i</sub> - 1,...,i<sub>n</sub> }</i>. Let the max value in <i>s</i> be defined as <i>m</i>. If <i>m &gt; n<sub>i</sub> &isin; s; b = b+1.
+Define a given array <i>a</i> where each index can be defined as <i>i<sub>n</sub>. &forall; i<sub>n</sub> &isin; a</i>, let the value of each <i>i<sub>n</sub></i> be defined as <i>n<sub>i</sub></i>. Let <i>a'</i> be defined as { n<sub>i</sub> - 1</i> | <i>n<sub>i</sub> &isin; a &gt; n<sub>i</sub> &isin; a' }</i>. If <i>n<sub>i</sub> - i<sub>n</sub> &isin; a' &gt; 2;</i> determine the array to be "too chaotic." Let the number of bribes be defined as <i>b = 0</i>. For each <i>i<sub>n</sub> &isin; a'</i>, let s  &sub; a' where <i>s = { n<sub>i</sub> - 1,...,i<sub>n</sub> }</i>. If <i>n<sub>i</sub> &isin; s &gt; n<sub>i</sub> &isin; a'; b = b+1.
