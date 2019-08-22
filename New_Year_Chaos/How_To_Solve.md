@@ -74,7 +74,7 @@ Let each index in a given array <i>a</i> be defined as <i>i<sub>n</sub>. &forall
 
 The above formula helps us determine if a chaotic line has been formed by only having to look at a single element and avoid iterating through the whole array.
 
-If a chaotic line did not form, we still need to determine how many bribes occurred. To do this we can use our 0 based array and determine if the largest digit in range is greater than the digit being compared. If so, then we increment our bribe by 1. This is the equivalent of asking a person on line, if they were bribed by a person in front of them and them saying "yes."
+If a chaotic line did not form, we still need to determine how many bribes occurred. To do this we can use our 0 based array and determine if the largest digit in range is greater than the digit being compared. If so, then we increment our bribe by 1. This is the equivalent of asking a person on line, if they were bribed by a person in front of them, and them saying "yes."
 
 We can shows this by a step by step example:
 
@@ -92,4 +92,4 @@ Essentially what is occuring is we are starting with the first index and slowly 
 ## Putting it all Together
 We can assert the following:
 
-For a given array <i>a</i> where each index can be defined as <i>i<sub>n</sub>. &forall; i<sub>n</sub> &isin; a</i>, let the value of each <i>i<sub>n</sub></i> be defined as <i>n<sub>i</sub></i>. Let <i>a'</i> be defined as { n<sub>i</sub> - 1</i> | <i>n<sub>i</sub> &isin; a &lt; n<sub>i</sub> &isin; a' }</i>. If <i>n<sub>i</sub> - i<sub>n</sub> &isin; a' &gt; 2;</i> determine the array to be "too chaotic." Let the number of bribes be defined as <i>b = 0</i>. For each <i>i<sub>n</sub> &isin; a'</i>, let s  &sub; a' where <i>s = { n<sub>i</sub> - 1...i<sub>n</sub> }</i>. Let the max value in <i>s</i> be defined as <i>m</i>. If <i>m &gt; n<sub>i</sub> &isin; s; b = b+1.
+For a given array <i>a</i> where each index can be defined as <i>i<sub>n</sub>. &forall; i<sub>n</sub> &isin; a</i>, let the value of each <i>i<sub>n</sub></i> be defined as <i>n<sub>i</sub></i>. Let <i>a'</i> be defined as { n<sub>i</sub> - 1</i> | <i>n<sub>i</sub> &isin; a &gt; n<sub>i</sub> &isin; a' }</i>. If <i>n<sub>i</sub> - i<sub>n</sub> &isin; a' &gt; 2;</i> determine the array to be "too chaotic." Let the number of bribes be defined as <i>b = 0</i>. For each <i>i<sub>n</sub> &isin; a'</i>, let s  &sub; a' where <i>s = { n<sub>i</sub> - 1...i<sub>n</sub> }</i>. Let the max value in <i>s</i> be defined as <i>m</i>. If <i>m &gt; n<sub>i</sub> &isin; s; b = b+1.
