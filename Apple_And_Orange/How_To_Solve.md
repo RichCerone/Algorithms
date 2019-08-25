@@ -60,3 +60,18 @@ Print two integers on two different lines:
     1
 
 # How To Solve This Problem
+This problem isn't hard to solve, but it does try to trick you by giving you a lot of information at once. I personally think this is a good problem to help demonstrate whether you can follow directions and pick out the useful informaton from the useless.
+
+Let's break down this problem to what is actually important:
+- The house coordinates are given as <i><b>s</b></i> and <i><b>t</b></i> to be a set [<i><b>s,t</b></i>]. 
+- The apple and orange tree start at a single <i>x</i>-coordinate position on the <i>x</i>-axis given as <i><b>a</b></i> and <i><b>b</b></i>.
+- The number of apples thrown are given as <i><b>m</b></i> and <i><b>n</b></i>.
+
+All this question is really asking is that given the throwing distances of each apple and orange, do they land within [<i><b>s</b></i>, <i><b>t</b></i>] inclusive. 
+
+The only other thing to note is that the original throw distance needs to be added by the <i><b>a</b></i> or <i><b>b</b></i> (depending on whether it is an apple or orange).
+
+## Putting it all Together
+We can assert the following:
+
+A house coordinates is defined as <i><b>s</b></i> and <i><b>t</b></i> such that <i><b>s</b></i> is the starting poistion of the house and <i><b>t</b></i> is the ending postion of the house given as [<i><b>s</b></i>, <i><b>t</b></i>] on the <i>x</i>-axis. Let the single <i>x</i>-coordinate of the apple tree be represented as <i><b>a</b></i> and the single <i>x</i>-coordinate of the orange tree be represented as <i><b>b</b></i>. Let the number of apples thrown be represented as <i><b>m</b></i> and the number of oranges be represented as <i><b>n</b></i>. The <i>x</i>-coordinate of each apple thrown is represented as a set <i><b>a<sub>c</sub></b></i> and the <i>x</i>-coordinate of each orange thrown is represented as a set <i><b>b<sub>c</sub></b></i>. Let <i><b>a<sub>i</sub></b></i> &isin; <i><b>a<sub>c</sub></b></i> be added with the <i>x</i>-coordinate of the apple tree <i><b>a</b></i> and let <i><b>b<sub>i</sub></b></i> &isin; <i><b>b<sub>c</sub></b></i> be added with the <i>x</i>-coordinate of the orange tree <i><b>b</b></i>. If <i><b>a<sub>i</sub></b></i> &isin; [<i><b>s</b></i>, <i><b>t</b></i>] or <b><i>b<sub>i</sub></b></i> &isin; [<i><b>s</b></i>, <i><b>t</b></i>] inclusive, then count that apple or orange as landing within the house.  
